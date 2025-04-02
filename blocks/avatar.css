@@ -7,8 +7,6 @@
   display: flex;
   justify-content: space-between;
   border-bottom:1px solid #21212166;
-
-
 }
 
 .avatar__section{
@@ -19,13 +17,15 @@
   margin: 0;
 }
 
-.avatar__description{
+.avatar__description {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  width: 420px;
-  height: 60px;
+  max-width: 420px;
+  max-height: 156px; /* name (96px) + title (16px * 3 lines max) + spacing */
+  overflow: hidden;
 }
+
 
 .avatar__details{
   display: flex;
@@ -37,15 +37,21 @@
   justify-content: space-between;
 }
 
-.name{
+.name {
   margin: 0;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 32px;
   line-height: 100%;
   letter-spacing: 0%;
+  overflow: hidden;
 
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* max 3 lines */
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
 }
+
 
 .title{
   margin: 0;
@@ -56,6 +62,12 @@
   letter-spacing: 0%;
   color: #212121B2;
   opacity: 70%;
+  overflow: hidden;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* max 3 lines */
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
 }
 
 .avatar__edit{
@@ -118,4 +130,3 @@ font-size: 16px;
   width: 12px;
   height: 12px;
 }
-
