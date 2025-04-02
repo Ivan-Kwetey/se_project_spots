@@ -18,3 +18,10 @@
   max-width: 94px;
 
 }
+
+@media (max-width: 630px){
+  .header{
+    max-width: 630px;
+    max-height: 46px;
+  }
+}

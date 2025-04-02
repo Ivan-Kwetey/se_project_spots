@@ -61,5 +61,35 @@
   font-size: 20px;
   line-height: 120%;
   letter-spacing: 0%;
+  max-height: 24px;
+  max-width: 350px;
+
+
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+
+  overflow: hidden;
+
+
 }
+
+@media (max-width:630px){
+  .card{
+    margin: 0  auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 288px;
+    height: 318px;
+    margin-bottom: 20px;
+  }
+
+  .card__image-box{
+    width: 288px;
+    height: 318px;
+  }
+}
+
 
