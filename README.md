@@ -2,7 +2,7 @@
   
 **About**
   
-**Spots** is a responsive front-end web project that showcases a curated feed of image cards and user profile details in a clean and modern interface. It is structured using semantic HTML5, organized CSS, and follows the BEM (Block Element Modifier) naming convention for maintainable and scalable code. 
+**Spots** is my responsive front-end web project from the tripleten SE Bootcamp that showcases a curated feed of image cards and user profile details in a clean and modern interface. It is structured using semantic HTML5, organized CSS, and follows the BEM (Block Element Modifier) naming convention for maintainable and scalable code. 
 
 ---
 
