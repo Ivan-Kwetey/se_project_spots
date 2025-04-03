@@ -50,6 +50,12 @@
 .gallery__icon {
   width: 23px;
   height: 20px;
+  opacity: 0.4;
+}
+
+.gallery__icon:hover{
+  opacity: 1;
+  cursor: pointer;
 }
 
 .gallery__text {

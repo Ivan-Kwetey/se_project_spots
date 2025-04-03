@@ -26,12 +26,12 @@
 - **Normalize.css** to ensure consistent styling across browsers
 - **Git & GitHub Pages** for version control and deployment
   
-**Images**  
+**Preview**  
   ![Spots Preview](./images/app.jpg)
 
   
 Good luck and have fun!
 
-# Spots## 🔗 Live Demo
+#🔗 Live Demo
 
 🌐 [View the project on GitHub Pages](https://ivan-kwetey.github.io/se_project_spots/)
