@@ -1,13 +1,12 @@
-.page{
+.page {
   margin: 0 auto;
   background-color: #FCF5E5;
   min-height: 100vh;
   max-width: 1440px;
 }
 
-@media (max-width: 630px){
-  .page{
+@media (max-width: 630px) {
+  .page {
     max-width: 630px;
   }
-
 }

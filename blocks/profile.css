@@ -1,4 +1,4 @@
-.avatar{
+.profile {
   max-width: 1280px;
   max-height: 210px;
   left: 80px;
@@ -6,10 +6,10 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  border-bottom:1px solid #21212166;
+  border-bottom: 1px solid #21212166;
 }
 
-.avatar__section{
+.profile__section {
   display: flex;
   width: 505px;
   height: 190px;
@@ -17,17 +17,16 @@
   margin: 0;
 }
 
-.avatar__description {
+.profile__description {
   display: flex;
   flex-direction: column;
   gap: 12px;
   max-width: 420px;
-  max-height: 156px; /* name (96px) + title (16px * 3 lines max) + spacing */
+  max-height: 156px;
   overflow: hidden;
 }
 
-
-.avatar__details{
+.profile__details {
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -37,40 +36,31 @@
   justify-content: space-between;
 }
 
-.name {
+.profile__name,
+.profile__title{
   margin: 0;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+.profile__name {
   font-size: 32px;
   line-height: 100%;
-  letter-spacing: 0%;
-  overflow: hidden;
-
-  display: -webkit-box;
-  -webkit-line-clamp: 3; /* max 3 lines */
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
 }
 
-
-.title{
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
+.profile__title {
   font-size: 16px;
-  line-height: 100%;
-  letter-spacing: 0%;
   color: #212121B2;
-  opacity: 70%;
-  overflow: hidden;
-
-  display: -webkit-box;
-  -webkit-line-clamp: 3; /* max 3 lines */
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
+  opacity: 0.7;
 }
 
-.avatar__edit{
+.profile__edit {
   display: flex;
   width: 107.34012603759766px;
   height: 16px;
@@ -78,61 +68,54 @@
   padding: 0;
   border: none;
   background-color: #FCF5E5;
-
 }
 
-.avatar__edit-text{
-font-family: "Poppins", sans-serif;
-font-weight: 500;
-font-size: 16px;
-line-height: 100%;
-letter-spacing: 0%;
-opacity: 70%;
-
-
+.profile__edit-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  opacity: 0.7;
 }
 
-.avatar__photo{
+.profile__photo {
   border-color: #D9D9D9;
   border-radius: 8px;
 }
 
-.avatar__edit-pencil{
+.profile__edit-icon {
   opacity: 0.7;
 }
 
-.post{
+.profile__post {
   display: flex;
   align-items: center;
   width: 149px;
   height: 52px;
-  padding-top: 18px;
-  padding-right: 24px;
-  padding-bottom: 18px;
-  padding-left: 32px;
+  padding: 18px 24px 18px 32px;
   gap: 8px;
   border-radius: 8px;
   margin: auto 0 0;
   background-color: #212121;
-
 }
 
-.avatar__post-text{
-font-family: "Poppins", sans-serif;
-font-weight: 500;
-line-height: 100%;
-letter-spacing: 0%;
-color:#FCF5E5;
-font-size: 16px;
+.profile__post-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #FCF5E5;
+  font-size: 16px;
 }
 
-.avatar__post-icon{
+.profile__post-icon {
   width: 12px;
   height: 12px;
 }
 
 @media (max-width: 630px) {
-  .avatar {
+  .profile {
     flex-direction: column;
     align-items: center;
     max-width: 288px;
@@ -140,13 +123,12 @@ font-size: 16px;
     gap: 20px;
   }
 
-  .avatar__photo{
+  .profile__photo {
     width: 80px;
     height: 80px;
-
   }
 
-  .avatar__section {
+  .profile__section {
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -155,21 +137,17 @@ font-size: 16px;
     gap: 12px;
   }
 
-  .avatar__details {
+  .profile__details {
     width: 100%;
     height: auto;
     align-items: center;
   }
 
-  .avatar__description {
+  .profile__description {
     align-items: center;
   }
 
-  .post {
-    margin: 0;
-  }
-
-  .avatar__section {
+  .profile__section {
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -177,28 +155,26 @@ font-size: 16px;
     height: auto;
   }
 
-  .avatar__details {
+  .profile__details {
     width: 100%;
     height: auto;
     align-items: center;
   }
 
-  .avatar__description {
+  .profile__description {
     align-items: center;
     gap: 6px;
     margin-bottom: 32px;
   }
 
-  .post {
+  .profile__post {
     margin: 0;
     width: 100%;
     height: 52px;
     justify-content: center;
   }
-  .name{
-    font-size: 20px;
-  }
-  .post{
 
+  .profile__name {
+    font-size: 20px;
   }
 }

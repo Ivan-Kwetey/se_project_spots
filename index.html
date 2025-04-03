@@ -1,112 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=7">
-  <meta name="description" content="Spot">
-  <meta name="keywords" content="HTML.CSS">
-  <meta name="author" content="Ivan Kwetey">
-  <link rel="stylesheet" href="pages/index.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=7" />
+  <meta name="description" content="Spot" />
+  <meta name="keywords" content="HTML.CSS" />
+  <meta name="author" content="Ivan Kwetey" />
+  <link rel="stylesheet" href="pages/index.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <title>Spots</title>
 </head>
 <body>
   <div class="page">
+
+    <!-- Header -->
     <header class="header">
-      <div class="two">
-        <img src="/images/Logo.svg" alt="spot logo" class="header__logo">
+      <div class="header__inner">
+        <img src="/images/Logo.svg" alt="spot logo" class="header__logo" />
       </div>
     </header>
 
-    <section class="avatar">
-      <div class="avatar__section">
-        <img src="/images/avatar.jpg" alt="avatar" class="avatar__photo">
+    <!-- Profile Section -->
+    <main class="content">
+      <section class="profile">
+        <div class="profile__section">
+          <img src="/images/avatar.jpg" alt="avatar" class="profile__photo" />
 
-        <section class="avatar__details">
-          <div class="avatar__description">
-            <div class="name">Bessie Coleman
-
+          <section class="profile__details">
+            <div class="profile__description">
+              <h1 class="profile__name">Bessie Coleman</h1>
+              <h2 class="profile__title">Civil Aviator</2>
             </div>
-            <div class="title">Civil Aviator </div>
-          </div>
 
-          <button class="avatar__edit" type="button">
-            <img src="/images/editpen.svg" alt="" class="avatar__edit-pencil">
-              <div class="avatar__edit-text"> Edit Profile</div>
-          </button>
-        </section>
-      </div>
-      <button class="post" type="button">
-        <img src="/images/newpost.svg" alt="" class="avatar__post-icon">
-        <div class="avatar__post-text">New Post</div>
-      </button>
-    </section>
-
-    <section class="card-grid">
-        <div class="card">
-          <div class="card__image-box">
-            <img src="/images/1-photo-by-moritz-feldmann-from-pexels.jpg" class="card__image" alt="..." />
-          </div>
-          <div class="card__image-info">
-            <h5 class="card__image-text">Val Thorens is a scenic alpine village known for world-class skiing and breathtaking views.</h5>            <img src="/images/LikeIcon.svg" alt="" class="card__image-icon">
-          </div>
+            <button class="profile__edit" type="button">
+              <img src="/images/editpen.svg" alt="edit icon" class="profile__edit-icon" />
+              <div class="profile__edit-text">Edit Profile</div>
+            </button>
+          </section>
         </div>
 
-        <div class="card">
-          <div class="card__image-box">
-            <img src="/images/2-photo-by-ceiline-from-pexels.jpg" class="card__image" alt="..." />
-          </div>
-          <div class="card__image-info">
-            <h5 class="card__image-text">Restaurant terrace overlooking a calm street, perfect for evening meals and people-watching moments.</h5>            <img src="/images/LikeIcon.svg" alt="" class="card__image-icon">
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card__image-box">
-            <img src="/images/3-photo-by-tubanur-dogan-from-pexels.jpg" class="card__image" alt="..." />
-          </div>
-          <div class="card__image-info">
-            <h5 class="card__image-text">An outdoor cafe nestled in the city corner, buzzing with chatter and the smell of coffee.</h5>            <img src="/images/LikeIcon.svg" alt="" class="card__image-icon">
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card__image-box">
-            <img src="/images/4-photo-by-maurice-laschet-from-pexels.jpg" class="card__image" alt="..." />
-          </div>
-          <div class="card__image-info">
-            <h5 class="card__image-text">A very long bridge, over the forest leads travelers across treetops and into the mountains beyond.</h5>
-            <img src="/images/LikeIcon.svg" alt="" class="card__image-icon">
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card__image-box">
-            <img src="/images/5-photo-by-van-anh-nguyen-from-pexels.jpg" class="card__image" alt="..." />
-          </div>
-          <div class="card__image-info">
-            <h5 class="card__image-text">Tunnel with morning light pouring through, creating a warm and peaceful passage beneath the hillside.</h5>
-            <img src="/images/LikeIcon.svg" alt="" class="card__image-icon">
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card__image-box">
-            <img src="/images/6-photo-by-moritz-feldmann-from-pexels.jpg" class="card__image" alt="..." />
-          </div>
-          <div class="card__image-info">
-            <h5 class="card__image-text">Mountain house surrounded by pine trees, ideal for cozy getaways and stunning winter sunrises.</h5>
-            <img src="/images/LikeIcon.svg" alt="" class="card__image-icon">
-          </div>
-        </div>
-
-
+        <button class="profile__post" type="button">
+          <img src="/images/newpost.svg" alt="new post icon" class="profile__post-icon" />
+          <div class="profile__post-text">New Post</div>
+        </button>
       </section>
+
+    <!-- Gallery Section -->
+      <section class="gallery">
+        <div class="gallery__card">
+          <div class="gallery__image-box">
+            <img src="/images/1-photo-by-moritz-feldmann-from-pexels.jpg" class="gallery__image" alt="Val Thorens" />
+          </div>
+          <div class="gallery__info">
+            <p class="gallery__text">
+              Val Thorens is a scenic alpine village known for world-class skiing and breathtaking views.
+            </p>
+            <img src="/images/LikeIcon.svg" alt="like icon" class="gallery__icon" />
+          </div>
+        </div>
+
+        <div class="gallery__card">
+          <div class="gallery__image-box">
+            <img src="/images/2-photo-by-ceiline-from-pexels.jpg" class="gallery__image" alt="Restaurant terrace" />
+          </div>
+          <div class="gallery__info">
+            <p class="gallery__text">
+              Restaurant terrace overlooking a calm street, perfect for evening meals and people-watching moments.
+            </p>
+            <img src="/images/LikeIcon.svg" alt="like icon" class="gallery__icon" />
+          </div>
+        </div>
+
+        <div class="gallery__card">
+          <div class="gallery__image-box">
+            <img src="/images/3-photo-by-tubanur-dogan-from-pexels.jpg" class="gallery__image" alt="An outdoor cafe" />
+          </div>
+          <div class="gallery__info">
+            <p class="gallery__text">
+              An outdoor cafe nestled in the city corner, buzzing with chatter and the smell of coffee.
+            </p>
+            <img src="/images/LikeIcon.svg" alt="like icon" class="gallery__icon" />
+          </div>
+        </div>
+
+        <div class="gallery__card">
+          <div class="gallery__image-box">
+            <img src="/images/4-photo-by-maurice-laschet-from-pexels.jpg" class="gallery__image" alt="A very long bridge" />
+          </div>
+          <div class="gallery__info">
+            <p class="gallery__text">
+              A very long bridge, over the forest leads travelers across treetops and into the mountains beyond.
+            </p>
+            <img src="/images/LikeIcon.svg" alt="like icon" class="gallery__icon" />
+          </div>
+        </div>
+
+        <div class="gallery__card">
+          <div class="gallery__image-box">
+            <img src="/images/5-photo-by-van-anh-nguyen-from-pexels.jpg" class="gallery__image" alt="Tunnel with morning light" />
+          </div>
+          <div class="gallery__info">
+            <p class="gallery__text">
+              Tunnel with morning light pouring through, creating a warm and peaceful passage beneath the hillside.
+            </p>
+            <img src="/images/LikeIcon.svg" alt="like icon" class="gallery__icon" />
+          </div>
+        </div>
+
+        <div class="gallery__card">
+          <div class="gallery__image-box">
+            <img src="/images/6-photo-by-moritz-feldmann-from-pexels.jpg" class="gallery__image" alt="..." />
+          </div>
+          <div class="gallery__info">
+            <p class="gallery__text">
+              Mountain house surrounded by pine trees, ideal for cozy getaways and stunning winter sunrises.
+            </p>
+            <img src="/images/LikeIcon.svg" alt="like icon" class="gallery__icon" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
     <footer class="footer">
-        <p class="footer__text">2025 &copy Ivan Kwetey. All rights reserved.</p>
+      <p class="footer__text">2025 &copy; Ivan Kwetey. All rights reserved.</p>
     </footer>
   </div>
-
 </body>
 </html>

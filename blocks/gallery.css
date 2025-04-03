@@ -1,24 +1,5 @@
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(413px, 413px));
-  column-gap: 20px;
-  max-width: 1280px;
-  margin: 20px auto;
-  justify-content: center;
-  border-bottom: 1px solid #21212166;
-}
-
-.card{
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 413px;
-  height: 445px;
-  padding: 0 0 40px;
-}
-
 /* i also tried using flex method for cards*/
-/*.card-grid{
+/*.gallery{
   display: flex;
   max-width: 1280px;
   max-height: 970px;
@@ -28,34 +9,50 @@
   flex-wrap: wrap;
 */
 
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(413px, 413px));
+  column-gap: 20px;
+  max-width: 1280px;
+  margin: 20px auto;
+  justify-content: center;
+  border-bottom: 1px solid #21212166;
+}
 
-.card__image-box{
+.gallery__card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 413px;
+  height: 445px;
+  padding: 0 0 40px;
+}
+
+.gallery__image-box {
   width: 413px;
   height: 413px;
 }
 
-.card__image{
+.gallery__image {
   width: 100%;
   height: 100%;
   border-radius: 8px;
-
 }
 
-.card__image-info{
+.gallery__info {
   display: flex;
   justify-content: space-between;
   padding: 0;
   height: 24px;
   align-items: center;
-
 }
 
-.card__imge-icon{
+.gallery__icon {
   width: 23px;
   height: 20px;
 }
 
-.card__image-text{
+.gallery__text {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 20px;
@@ -63,33 +60,25 @@
   letter-spacing: 0%;
   max-height: 24px;
   max-width: 350px;
-
-
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
-
   overflow: hidden;
-
-
 }
 
-@media (max-width:630px){
-  .card{
-    margin: 0  auto;
+@media (max-width: 630px) {
+  .gallery__card {
+    margin: 0 auto 20px;
     display: flex;
     flex-direction: column;
     gap: 12px;
     width: 288px;
     height: 318px;
-    margin-bottom: 20px;
   }
 
-  .card__image-box{
+  .gallery__image-box {
     width: 288px;
     height: 318px;
   }
 }
-
-

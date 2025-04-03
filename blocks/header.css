@@ -1,26 +1,24 @@
-.header{
+.header {
   display: flex;
   flex-direction: column;
-  background-color:#FFFFFFCC;
+  background-color: #FFFFFFCC;
   opacity: 80%;
-  padding-top: 10px 80px;
   height: 46px;
   margin-bottom: 34px;
   justify-content: center;
-
 }
 
-.two{
+.header__inner {
   margin: 10px auto;
 }
-.headr__logo{
+
+.header__logo {
   max-height: 26px;
   max-width: 94px;
-
 }
 
-@media (max-width: 630px){
-  .header{
+@media (max-width: 630px) {
+  .header {
     max-width: 630px;
     max-height: 46px;
   }
