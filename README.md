@@ -1,21 +1,37 @@
 # Project 3: Spots
+  
+**About**
+  
+**Spots** is a responsive front-end web project that showcases a curated feed of image cards and user profile details in a clean and modern interface. It is structured using semantic HTML5, organized CSS, and follows the BEM (Block Element Modifier) naming convention for maintainable and scalable code. 
 
-### Overview  
+---
 
-* Intro  
-* Figma  
-* Images  
-  
-**Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
+## ✨ Features
+
+- Responsive layout optimized for desktop and mobile views
+- User profile section with editable details
+- Dynamic card grid displaying image posts
+- Custom typography and modern design
+- Deployed on GitHub Pages
+
+---
+
+## 🛠️ Technologies & Techniques Used
+
+- **HTML5** for semantic structure
+- **CSS3** for styling and layout
+- **BEM (Block Element Modifier)** methodology for CSS class naming
+- **Flexbox & CSS Grid** for responsive design
+- **Custom fonts (Poppins)** via `@font-face` in `fonts.css`
+- **Normalize.css** to ensure consistent styling across browsers
+- **Git & GitHub Pages** for version control and deployment
   
 **Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
+  ![Spots Preview](./images/app.jpg)
+
   
 Good luck and have fun!
+
+# Spots## 🔗 Live Demo
+
+🌐 [View the project on GitHub Pages](https://ivan-kwetey.github.io/se_project_spots/)
