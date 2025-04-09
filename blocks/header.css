@@ -6,13 +6,10 @@
   justify-content: center;
 }
 
-.header__inner {
-  margin: 10px auto;
-}
-
 .header__logo {
   max-height: 26px;
   max-width: 94px;
+  margin: 10px auto;
 }
 
 @media (max-width: 630px) {

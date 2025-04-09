@@ -16,14 +16,9 @@
   padding: 0 0 40px;
 }
 
-.gallery__image-box {
-  width: 413px;
-  height: 413px;
-}
-
 .gallery__image {
-  width: 100%;
-  height: 100%;
+  max-width: 413px;
+  max-height: 413px;
   border-radius: 8px;
 }
 
@@ -38,6 +33,13 @@
   width: 23px;
   height: 20px;
   opacity: 0.4;
+  background-image: url('../images/LikeIcon.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
 }
 
 .gallery__icon:hover{
@@ -46,6 +48,7 @@
 }
 
 .gallery__text {
+  font-weight: 500;
   margin: 0;
   font-size: 20px;
   line-height: 120%;
@@ -67,7 +70,7 @@
     max-height: 318px;
   }
 
-  .gallery__image-box {
+  .gallery__image {
     width: 288px;
     height: 318px;
   }
