@@ -1,20 +1,9 @@
-/* i also tried using flex method for cards*/
-/*.gallery{
-  display: flex;
-  max-width: 1280px;
-  max-height: 970px;
-  border-bottom-width: 1px;
-  gap: 20px;
-  margin: 20px auto;
-  flex-wrap: wrap;
-*/
-
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(413px, 413px));
   column-gap: 20px;
   max-width: 1280px;
-  margin: 20px auto;
+  margin: 20px auto 0;
   justify-content: center;
   border-bottom: 1px solid #21212166;
 }
@@ -23,8 +12,7 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  width: 413px;
-  height: 445px;
+  width: 100%;
   padding: 0 0 40px;
 }
 
@@ -43,7 +31,6 @@
   display: flex;
   justify-content: space-between;
   padding: 0;
-  height: 24px;
   align-items: center;
 }
 
@@ -59,10 +46,9 @@
 }
 
 .gallery__text {
+  margin: 0;
   font-size: 20px;
   line-height: 120%;
-  letter-spacing: 0%;
-  max-height: 24px;
   max-width: 350px;
   display: -webkit-box;
   -webkit-line-clamp: 1;
@@ -77,8 +63,8 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-    width: 288px;
-    height: 318px;
+    max-width: 288px;
+    max-height: 318px;
   }
 
   .gallery__image-box {
