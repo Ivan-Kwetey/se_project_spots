@@ -1,4 +1,4 @@
-.gallery {
+.gallery__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(413px, 413px));
   column-gap: 20px;
@@ -6,6 +6,7 @@
   margin: 20px auto 0;
   justify-content: center;
   border-bottom: 1px solid #21212166;
+  padding: 0;
 }
 
 .gallery__card {
