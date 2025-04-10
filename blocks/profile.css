@@ -90,6 +90,8 @@
   border-radius: 8px;
   margin: auto 0 0;
   background-color: #212121;
+  font-weight: 500;
+  color: #fcf5e5;
 }
 
 .profile__post:hover {

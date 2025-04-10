@@ -64,15 +64,17 @@
 @media (max-width: 630px) {
   .gallery__card {
     margin: 0 auto 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
     max-width: 288px;
-    max-height: 318px;
+
   }
 
   .gallery__image {
     width: 288px;
-    height: 318px;
+    height: 288px;
+  }
+
+  .gallery__text{
+    max-width: 250px;
+    font-size: 16px;
   }
 }
