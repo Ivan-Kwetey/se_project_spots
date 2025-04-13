@@ -5,6 +5,7 @@
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #21212166;
+  padding-top: 34px;
 }
 
 .profile__section {
@@ -116,6 +117,7 @@
     align-items: center;
     max-width: 288px;
     gap: 20px;
+    padding-top: 20px;
   }
 
   .profile__photo {

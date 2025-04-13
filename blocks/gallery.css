@@ -65,6 +65,7 @@
   .gallery__card {
     margin: 0 auto 20px;
     max-width: 288px;
+    padding: 0;
 
   }
 
@@ -76,5 +77,10 @@
   .gallery__text{
     max-width: 250px;
     font-size: 16px;
+  }
+
+  .gallery__icon{
+    width: 20px;
+    height: 18px;
   }
 }
