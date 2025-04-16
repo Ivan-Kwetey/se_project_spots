@@ -132,6 +132,39 @@
     <footer class="footer">
       <p class="footer__text">2025 &copy; Ivan Kwetey. All rights reserved.</p>
     </footer>
+    <div class="modal modal_is_opened">
+      <div class="modal__container">
+        <div class="modal__header">
+          <h2 class="modal__title">Edit Profile</h2>
+          <button type="button" class="modal__close-btn" aria-label="Close"></button>
+        </div>
+
+        <form class="modal__form">
+          <label for="profile-name-input" class="modal__label">
+            Name
+            <input
+              type="text"
+              class="modal__input"
+              id="profile-name-input"
+              placeholder="Type your name"
+            />
+          </label>
+
+          <label for="profile-description-input" class="modal__label">
+            Description
+            <input
+              type="text"
+              class="modal__input"
+              id="profile-description-input"
+              placeholder="Describe yourself"
+            />
+          </label>
+
+          <button class="modal__submit-btn" type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+
   </div>
 </body>
 </html>
