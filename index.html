@@ -132,7 +132,7 @@
     <footer class="footer">
       <p class="footer__text">2025 &copy; Ivan Kwetey. All rights reserved.</p>
     </footer>
-    <div class="modal modal_is_opened">
+    <div class="modal">
       <div class="modal__container">
         <div class="modal__header">
           <h2 class="modal__title">Edit Profile</h2>
@@ -164,6 +164,39 @@
         </form>
       </div>
     </div>
+    <div class="modal modal_is_opened">
+      <div class="modal__container">
+        <div class="modal__header">
+          <h2 class="modal__title">New Post</h2>
+          <button type="button" class="modal__close-btn" aria-label="Close"></button>
+        </div>
+
+        <form class="modal__form">
+          <label for="image-link-input" class="modal__label">
+            Image link
+            <input
+              type="text"
+              class="modal__input"
+              id="image-link-input"
+              placeholder="Paste a link to the picture"
+            />
+          </label>
+
+          <label for="post-caption-input" class="modal__label">
+            Caption
+            <input
+              type="text"
+              class="modal__input"
+              id="post-caption-input"
+              placeholder="Type your caption"
+            />
+          </label>
+
+          <button class="modal__submit-btn" type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+
 
   </div>
 </body>

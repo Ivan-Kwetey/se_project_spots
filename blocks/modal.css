@@ -131,9 +131,6 @@
     padding: 12px;
     gap: 24px;
   }
-  .modal__header{
-    height: 40px;
-  }
 
   .modal__title {
     font-size: 20px;
@@ -145,11 +142,9 @@
 
   .modal__label {
     font-size: 16px;
-    height: auto;
   }
 
   .modal__input {
-    padding: 14px;
     font-size: 16px;
   }
 
