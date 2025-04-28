@@ -125,6 +125,20 @@
   padding: 18px 32px;
 }
 
+.modal {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.modal_is-opened {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
 @media (max-width: 630px) {
   .modal__container {
     max-width: 300px;
