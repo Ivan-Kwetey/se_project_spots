@@ -1,3 +1,16 @@
+//Modal Functions
+const MODAL_OPEN_CLASS = "modal_is-opened";
+
+function openModal(modal) {
+  modal.classList.add(MODAL_OPEN_CLASS);
+}
+
+function closeModal(modal) {
+  modal.classList.remove(MODAL_OPEN_CLASS);
+}
+
+
+// Initial Cards Data
 const initialCards = [
   {
     name: "Val Thorens",
@@ -25,15 +38,11 @@ const initialCards = [
   },
 ];
 
-const MODAL_OPEN_CLASS = "modal_is-opened";
-
-function openModal(modal) {
-  modal.classList.add(MODAL_OPEN_CLASS);
-}
-
-function closeModal(modal) {
-  modal.classList.remove(MODAL_OPEN_CLASS);
-}
+// Log initial cards to the console
+initialCards.forEach(card => {
+  console.log(card.name);
+  console.log(card.link);
+});
 
 const editProfileBtn = document.querySelector(".profile__edit");
 const editProfileModal = document.querySelector("#edit-profile-modal");
@@ -54,7 +63,9 @@ const addCardFormElement = newPostModal.querySelector(".modal__form");
 const imageLinkInput = newPostModal.querySelector("#image-link-input");
 const captionInput = newPostModal.querySelector("#post-caption-input");
 
+
 editProfileBtn.addEventListener("click", () => {
+  // Fill form with current profile data before opening
   nameInput.value = profileNameElement.textContent;
   jobInput.value = profileJobElement.textContent;
   openModal(editProfileModal);
@@ -65,6 +76,7 @@ editProfileCloseBtn.addEventListener("click", () => closeModal(editProfileModal)
 newPostBtn.addEventListener("click", () => openModal(newPostModal));
 
 newPostCloseBtn.addEventListener("click", () => closeModal(newPostModal));
+
 
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
@@ -80,15 +92,7 @@ function handleAddCardSubmit(evt) {
   console.log("Image Link:", imageLinkInput.value);
   console.log("Caption:", captionInput.value);
   closeModal(newPostModal);
+  evt.target.reset();
 }
 
 addCardFormElement.addEventListener("submit", handleAddCardSubmit);
-
-//initialCards.forEach(card => {
-//  console.log(card.name);
-//});
-
-initialCards.forEach(function(item){
-  console.log(item.name);
-  console.log(item.link);
-})
