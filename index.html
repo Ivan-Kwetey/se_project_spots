@@ -47,6 +47,20 @@
     <!-- Gallery Section -->
       <section class="gallery">
         <ul class="gallery__list">
+          <template id="card-template">
+            <li class="gallery__card">
+              <img src="#" class="gallery__image" alt="" />
+              <button class="gallery__icon-delete" aria-label="delete" type="button">
+              </button>
+            <div class="gallery__info">
+              <h3 class="gallery__text">
+              </h3>
+              <button class="gallery__icon" aria-label="Like" type="button">
+              </button>
+
+            </div>
+          </li>
+          </template>
 
         </ul>
       </section>
@@ -94,7 +108,7 @@
       <div class="modal__container">
         <div class="modal__header">
           <h2 class="modal__title">New post</h2>
-          <button type="button" class="modal__close-btn" aria-label="Close"></button>
+          <button type="button" class="modal__close-btn " aria-label="Close"></button>
         </div>
 
         <form class="modal__form">
@@ -124,8 +138,14 @@
         </form>
       </div>
     </div>
-
-
+    <!-- PREVIEW SECTION -->
+    <div class="modal" id="preview-post-modal">
+        <div class="modal__preview_header">
+          <img src="#" alt="#" class="preview__gallary">
+          <p class="modal__preview-caption"></p>
+          <button type="button" class="modal__close-btn modal__close_type_preview" aria-label="Close"></button>
+        </div>
+    </div>
   </div>
   <script src="./scripts/index.js"></script>
 </body>

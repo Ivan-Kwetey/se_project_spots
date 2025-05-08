@@ -15,11 +15,13 @@
   gap: 12px;
   width: 100%;
   padding: 0 0 40px;
+  position: relative;
 }
 
 .gallery__image {
-  max-width: 413px;
-  max-height: 413px;
+  width: 413px;
+  height: 413px;
+  object-fit: cover;
   border-radius: 8px;
 }
 
@@ -43,9 +45,37 @@
   background-color: transparent;
 }
 
-.gallery__icon:hover{
+.gallery__icon-delete {
+  background-image: url(../images/deleteDefault.svg);
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  right: 10px;
+  top: 10px;
+}
+
+.gallery__icon-delete:hover {
+  background-image: url('../images/deleteHover.svg');
+}
+
+.gallery__icon_liked {
+  background-image: url('../images/StateLiked.svg');
+  opacity: 1;
+}
+
+.gallery__icon:hover {
   opacity: 1;
   cursor: pointer;
+}
+
+.gallery__icon_liked:hover {
+  opacity: 0.4;
 }
 
 .gallery__text {
@@ -66,7 +96,6 @@
     margin: 0 auto 20px;
     max-width: 288px;
     padding: 0;
-
   }
 
   .gallery__image {
@@ -74,14 +103,13 @@
     height: 288px;
   }
 
-  .gallery__text{
+  .gallery__text {
     max-width: 250px;
     font-size: 16px;
   }
 
-  .gallery__icon{
+  .gallery__icon {
     width: 20px;
     height: 18px;
   }
 }
-
