@@ -144,7 +144,7 @@
   width: 100%;
   object-fit: contain;
   display: block;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 .modal__preview-caption{
@@ -194,7 +194,6 @@
 
   .modal__submit-btn {
     width: 100%;
-
   }
 
   .modal__close-btn_type_preview{
@@ -203,7 +202,8 @@
   }
 
   .modal__image{
-    max-width: unset;
+   /* max-width: unset;*/
+   max-width: 288px;
   }
 
   .modal__preview-caption{
