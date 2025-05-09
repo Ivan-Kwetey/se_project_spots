@@ -1,11 +1,9 @@
-const MODAL_OPEN_CLASS = "modal_is-opened";
-
 function openModal(modal) {
-  modal.classList.add(MODAL_OPEN_CLASS);
+  modal.classList.add("modal_is-opened");
 }
 
 function closeModal(modal) {
-  modal.classList.remove(MODAL_OPEN_CLASS);
+  modal.classList.remove("modal_is-opened");
 }
 
 // Initial data
@@ -63,7 +61,7 @@ const captionInput = newPostModal.querySelector("#post-caption-input");
 
 const previewPostModal = document.querySelector('#preview-post-modal');
 const previewModalCloseBtn = previewPostModal.querySelector('.modal__close-btn');
-const previewElementImage = previewPostModal.querySelector('.preview__gallary');
+const previewElementImage = previewPostModal.querySelector('.modal__image');
 const previewCaption = previewPostModal.querySelector('.modal__preview-caption');
 
 const cardTemplate = document
@@ -92,7 +90,7 @@ function getCardElement(data) {
   });
 
   cardDeleteBtn.addEventListener("click", () => {
-    cardLikeBtn.closest('.gallery__card').remove();
+    cardElement.remove();
   });
 
   cardElementImage.addEventListener("click", () => {
