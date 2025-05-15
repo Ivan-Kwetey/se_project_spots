@@ -77,7 +77,7 @@
           <button type="button" class="modal__close-btn" aria-label="Close"></button>
         </div>
 
-        <form class="modal__form">
+        <form class="modal__form" novalidate>
           <label for="profile-name-input" class="modal__label">
             Name
             <input
@@ -86,7 +86,10 @@
               id="profile-name-input"
               placeholder="Type your name"
               required
+              minlength="2"
+              maxlength="40"
             />
+            <span id="profile-name-input-error" class="modal__error"></span>
           </label>
 
           <label for="profile-description-input" class="modal__label">
@@ -97,7 +100,10 @@
               id="profile-description-input"
               placeholder="Describe yourself"
               required
+              minlength="2"
+              maxlength="200"
             />
+            <span id="profile-description-input-error" class="modal__error"></span>
           </label>
 
           <button class="modal__submit-btn" type="submit">Save</button>
@@ -111,16 +117,17 @@
           <button type="button" class="modal__close-btn " aria-label="Close"></button>
         </div>
 
-        <form class="modal__form">
+        <form class="modal__form" novalidate>
           <label for="image-link-input" class="modal__label">
             Image link
             <input
-              type="text"
+              type="url"
               class="modal__input"
               id="image-link-input"
               placeholder="Paste a link to the picture"
               required
             />
+            <span id="image-link-input-error" class="modal__error"></span>
           </label>
 
           <label for="post-caption-input" class="modal__label">
@@ -131,7 +138,10 @@
               id="post-caption-input"
               placeholder="Type your caption"
               required
+              maxlength="30"
+              minlength="2"
             />
+            <span id="post-caption-input-error" class="modal__error"></span>
           </label>
 
           <button class="modal__submit-btn" type="submit">Save</button>
@@ -148,5 +158,6 @@
     </div>
   </div>
   <script src="./scripts/index.js"></script>
+  <script src="./scripts/validation.js"></script>
 </body>
 </html>

@@ -49,10 +49,12 @@
   cursor: pointer;
 }
 
-.modal__close-btn_type_preview{
+.modal__close-btn_type_preview {
   position: absolute;
-  top:0;
-  right:-52.5px;
+  top: 0;
+  right: -52.5px;
+  background: transparent url('../images/previewclose.svg') center/40px no-repeat;
+  opacity: 1;
 }
 
 .modal__close-btn:hover {
@@ -83,9 +85,9 @@
   gap: 8px;
   font-size: 16px;
   font-weight: 500;
-  color:#212121B2;
+  color: #212121B2;
   margin: 0;
-  padding:0;
+  padding: 0;
 }
 
 .modal__input {
@@ -109,14 +111,14 @@
 }
 
 .modal__input::placeholder {
-  color:#2121214D;
+  color: #2121214D;
 }
 
 .modal__submit-btn {
   width: 156px;
   height: 52px;
   background-color: #212121;
-  color:#FCF5E5ff;
+  color: #FCF5E5ff;
   border: none;
   border-radius: 8px;
   font-size: 16px;
@@ -126,6 +128,12 @@
   justify-content: center;
   cursor: pointer;
   padding: 18px 32px;
+  transition: opacity 0.3s ease;
+}
+
+.modal__submit-btn:disabled {
+  opacity: 0.5;
+  cursor: default;
 }
 
 .modal_is-opened {
@@ -134,11 +142,11 @@
   pointer-events: auto;
 }
 
-.modal__preview-container{
+.modal__preview-container {
   position: relative;
 }
 
-.modal__image{
+.modal__image {
   max-width: 80vw;
   max-height: 80vh;
   width: 100%;
@@ -147,7 +155,7 @@
   border-radius: 4px;
 }
 
-.modal__preview-caption{
+.modal__preview-caption {
   background-color: #212121;
   width: fit-content;
   border-radius: 8px;
@@ -157,17 +165,34 @@
   font-size: 20px;
 }
 
-.modal__close-btn_type_preview{
-  background: transparent url('../images/previewclose.svg') center/40px no-repeat;
-  opacity: 1;
-
-
+.modal__close-btn_type_preview:hover {
+  opacity: 0.4;
 }
 
-.modal__close-btn_type_preview:hover{
-  opacity: 0.4;}
+.modal__error {
+  display: none;
+  color: #ff0000b2;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.modal__input_type_error:invalid:not(:placeholder-shown) {
+  border: 1px solid rgba(255, 0, 0, 0.6);
+}
+
+.modal__submit-btn:hover:not(:disabled) {
+  opacity: 0.8;
+}
+
+.modal__input_type_error {
+  border: 1px solid rgba(255, 0, 0, 0.6);
+}
 
 
+.modal__error_visible {
+  display: block;
+}
 
 @media (max-width: 630px) {
   .modal__container {
@@ -196,17 +221,17 @@
     width: 100%;
   }
 
-  .modal__close-btn_type_preview{
-    top:-48px;
+  .modal__close-btn_type_preview {
+    top: -48px;
     right: 0;
   }
 
-  .modal__image{
-   /* max-width: unset;*/
-   max-width: 288px;
+  .modal__image {
+    max-width: 288px;
   }
 
-  .modal__preview-caption{
+  .modal__preview-caption {
     font-size: 16px;
   }
 }
+

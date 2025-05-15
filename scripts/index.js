@@ -1,45 +1,26 @@
+function handleOverlayClick(event) {
+  if (event.target.classList.contains('modal')) {
+    closeModal(event.target);
+  }
+}
+
+function handleEscKey(evt) {
+  if (evt.key === 'Escape') {
+    const openedModal = document.querySelector('.modal_is-opened');
+    if (openedModal) closeModal(openedModal);
+  }
+}
+
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  document.addEventListener('keydown', handleEscKey);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener('keydown', handleEscKey);
 }
 
-// Initial data
-const initialCards = [
-  {
-    name: "Golden Gate Bridge",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg"
-  },
-  {
-    name: "Val Thorens",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg"
-  },
-  {
-    name: "Restaurant terrace",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/2-photo-by-ceiline-from-pexels.jpg"
-  },
-  {
-    name: "An outdoor cafe",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/3-photo-by-tubanur-dogan-from-pexels.jpg"
-  },
-  {
-    name: "A very long bridge, over the forest and through the trees",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/4-photo-by-maurice-laschet-from-pexels.jpg"
-  },
-  {
-    name: "Tunnel with morning light",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/5-photo-by-van-anh-nguyen-from-pexels.jpg"
-  },
-  {
-    name: "Mountain house",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg"
-  },
-];
-
-
-// DOMs
 const editProfileBtn = document.querySelector(".profile__edit");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
@@ -71,8 +52,6 @@ const cardTemplate = document
 
 const galleryList = document.querySelector(".gallery__list");
 
-
-// Declared functions
 function getCardElement(data) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardElementTitle = cardElement.querySelector(".gallery__text");
@@ -125,22 +104,65 @@ function handleAddCardSubmit(evt) {
   evt.target.reset();
 }
 
-// Event Listeners
+// Open edit modal with values & clear errors
 editProfileBtn.addEventListener("click", () => {
   nameInput.value = profileNameElement.textContent;
   jobInput.value = profileJobElement.textContent;
+
+  const inputs = [nameInput, jobInput];
+  inputs.forEach(input => {
+    input.setCustomValidity('');
+    const errorElement = profileFormElement.querySelector(`#${input.id}-error`);
+    errorElement.textContent = "";
+    errorElement.classList.remove("modal__error_visible");
+    input.classList.remove("modal__input_type_error");
+  });
+
   openModal(editProfileModal);
 });
 
 editProfileCloseBtn.addEventListener("click", () => closeModal(editProfileModal));
 newPostBtn.addEventListener("click", () => openModal(newPostModal));
 newPostCloseBtn.addEventListener("click", () => closeModal(newPostModal));
-
+previewModalCloseBtn.addEventListener("click", () => closeModal(previewPostModal));
 profileFormElement.addEventListener("submit", handleProfileFormSubmit);
 addCardFormElement.addEventListener("submit", handleAddCardSubmit);
 
-//listener to close the preview modal
-previewModalCloseBtn.addEventListener("click", () => closeModal(previewPostModal));
+// Close modals by clicking overlay
+document.querySelectorAll('.modal').forEach((modal) => {
+  modal.addEventListener('mousedown', handleOverlayClick);
+});
+
+const initialCards = [
+  {
+    name: "Golden Gate Bridge",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg"
+  },
+  {
+    name: "Val Thorens",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg"
+  },
+  {
+    name: "Restaurant terrace",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/2-photo-by-ceiline-from-pexels.jpg"
+  },
+  {
+    name: "An outdoor cafe",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/3-photo-by-tubanur-dogan-from-pexels.jpg"
+  },
+  {
+    name: "A very long bridge, over the forest and through the trees",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/4-photo-by-maurice-laschet-from-pexels.jpg"
+  },
+  {
+    name: "Tunnel with morning light",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/5-photo-by-van-anh-nguyen-from-pexels.jpg"
+  },
+  {
+    name: "Mountain house",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg"
+  },
+];
 
 initialCards.forEach(function (item) {
   const cardElement = getCardElement(item);
