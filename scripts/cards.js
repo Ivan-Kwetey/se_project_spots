@@ -1,4 +1,3 @@
-// cards.js
 export const initialCards = [
   {
     name: "Golden Gate Bridge",
