@@ -1,4 +1,7 @@
-import { initialCards } from './cards.js';
+import './index.css';
+import { initialCards } from '../scripts/cards.js';
+import { enableValidation } from '../scripts/validation.js';
+import { validationConfig } from '../scripts/validation.js';
 
 function handleOverlayClick(event) {
   if (event.target.classList.contains('modal')) {
@@ -134,3 +137,5 @@ initialCards.forEach(function (item) {
   const cardElement = getCardElement(item);
   galleryList.append(cardElement);
 });
+
+enableValidation(validationConfig);

@@ -7,7 +7,6 @@
   <meta name="description" content="Spot" />
   <meta name="keywords" content="HTML.CSS" />
   <meta name="author" content="Ivan Kwetey" />
-  <link rel="stylesheet" href="./pages/index.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <title>Spots</title>
 </head>
@@ -16,14 +15,15 @@
 
     <!-- Header -->
     <header class="header">
-        <img src="./images/Logo.svg" alt="spot logo" class="header__logo" />
+        <img src="<%=require('./images/Logo.svg')%>" class="header__logo" alt="Logo">
     </header>
 
     <!-- Profile Section -->
     <main class="content">
       <section class="profile">
         <div class="profile__section">
-          <img src="./images/avatar.jpg" alt="avatar" class="profile__photo" />
+          <img src="<%=require('./images/avatar.jpg')%> "alt="avatar" class="profile__photo" />
+
 
           <div class="profile__details">
             <div class="profile__description">
@@ -32,14 +32,14 @@
             </div>
 
             <button class="profile__edit" type="button">
-              <img src="./images/editpen.svg" alt="edit icon" class="profile__edit-icon" />
+              <img src="<%=require('./images/editpen.svg')%>"alt="edit icon" class="profile__edit-icon" />
               <span class="profile__edit-text">Edit Profile</span>
             </button>
           </div>
         </div>
 
         <button class="profile__post" type="button">
-          <img src="./images/newpost.svg" alt="new post icon" class="profile__post-icon" />
+          <img src="<%=require('./images/newpost.svg')%>" alt="new post icon" class="profile__post-icon" />
           <span class="profile__post-text">New Post</span>
         </button>
       </section>
@@ -157,9 +157,7 @@
         </div>
     </div>
   </div>
-  <script type="module" src="./scripts/index.js"></script>
-  <script type="module" src="./scripts/cards.js"></script>
 
-  <script src="./scripts/validation.js"></script>
+
 </body>
 </html>
