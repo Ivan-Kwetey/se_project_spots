@@ -49,13 +49,12 @@ const setEventListeners = (formElement, config) => {
 };
 
 export const enableValidation = (config) => {
-  const formList = document.querySelectorAll(config.formSelector);
+  const formList = Array.from(document.querySelectorAll(config.formSelector));
   formList.forEach((formElement) => {
     setEventListeners(formElement, config);
   });
 };
 
-// Validation config
 export const validationConfig = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
@@ -64,5 +63,3 @@ export const validationConfig = {
   inputErrorClass: "modal__input_type_error",
   errorClass: "modal__error_visible"
 };
-
-enableValidation(validationConfig);
