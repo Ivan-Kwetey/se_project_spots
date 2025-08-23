@@ -158,6 +158,23 @@ deleteForm.addEventListener('submit', (evt) => {
   }
 });
 
+const deleteCancelBtn = deleteModal.querySelector('.modal__submit-btn-cancel');
+
+deleteCancelBtn.addEventListener('click', () => {
+  closeModal(deleteModal);
+  cardToDelete = null;
+  selectedCardId = null;
+});
+
+const deleteCloseBtn = deleteModal.querySelector('.delete-close-btn');
+
+deleteCloseBtn.addEventListener('click', () => {
+  closeModal(deleteModal);
+  cardToDelete = null;
+  selectedCardId = null;
+});
+
+
 // ---------- Edit Profile ----------
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();

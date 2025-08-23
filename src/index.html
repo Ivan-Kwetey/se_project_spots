@@ -21,9 +21,9 @@
     <!-- Profile Section -->
     <main class="content">
       <section class="profile">
-      <div class="profileAndButton">
+      <div class="profile__section">
         <!-- Avatar & overlay -->
-        <div class="photo-button">
+        <div class="photo__button">
           <img src="" alt="avatar" class="profile__photo" />
           <button class="profile__avatar-btn">
             <img src="<%=require('./images/editpencilwhite.svg')%>" class="profile__pencil-icon" alt="pencil icon" />
@@ -78,7 +78,7 @@
       <p class="footer__text">2025 &copy; Ivan Kwetey. All rights reserved.</p>
     </footer>
     <div class="modal" id="edit-profile-modal">
-      <div class="modal__container">
+      <div class="modal__container ">
         <div class="modal__header">
           <h2 class="modal__title">Edit profile</h2>
           <button type="button" class="modal__close-btn" aria-label="Close"></button>
@@ -197,7 +197,7 @@
 
       <!-- delete card -->
   <div class="modal " id="edit-delete-modal">
-      <div class="modal__container deletes">
+      <div class="modal__container cancel-delete">
         <div class="modal__delete-container">
         <div class="modal__header">
 
@@ -210,8 +210,8 @@
 
         <form class="modal__form" id="delete-form" novalidate>
 
-          <button class="modal__submit-btn delete-dimension subRed" type="submit">Delete</button>
-          <button class="modal__submit-btn  delete-dimension canWhite" type="button">Cancel</button>
+          <button class="modal__submit-btn modal__submit-btn--red" type="submit">Delete</button>
+          <button class="modal__submit-btn  modal__submit-btn-cancel modal__submit-btn--white" type="button">Cancel</button>
         </form>
       </div>
 

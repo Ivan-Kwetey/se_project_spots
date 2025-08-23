@@ -28,6 +28,19 @@
   font-family: 'Poppins', sans-serif;
   height: auto;
   background-color: white;
+
+
+
+
+}
+
+.cancel-delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   width: fit-content;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .modal__delete-container {
@@ -37,27 +50,18 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;   /* Centers vertically */
-  align-items: center;       /* Centers horizontally */
-  text-align: center;        /* Center text */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   gap: 32px;
   font-family: 'Poppins', sans-serif;
   height: auto;
-  background-color: white;   /* Remove yellow if not needed */
+  background-color: white;
   margin: 0;
-}
-.deletes{
-  width: fit-content;
-  padding-left: 0;
-  padding-right: 0;
-  background-color: yellow;
-  display: flex;
-  justify-content: center;
-align-items: center;
 }
 
 #edit-delete-modal .modal__header {
-  justify-content: center; /* center the text instead of space-between */
+  justify-content: center;
 }
 
 
@@ -225,22 +229,21 @@ align-items: center;
   border: 1px solid rgba(255, 0, 0, 0.6);
 }
 
-.subRed{
+.modal__submit-btn--red{
   background-color: #FF6565;
 }
-.subRed:hover:not(:disabled) {
+.modal__submit-btn--red:hover:not(:disabled) {
   background-color: #FF3333;
   opacity: 1;
 }
-
-.canWhite {
+.modal__submit-btn--white {
   background-color: #FFFFFF;
   color: #212121;
   border: #212121 1px solid;
 
 }
 
-.canWhite:hover:not(:disabled){
+.modal__submit-btn--red:hover:not(:disabled){
   background-color: #212121;
   opacity: 1;
   color: #FFFFFF;
@@ -343,7 +346,7 @@ align-items: center;
     align-items: center;
     gap: 12px;
   }
-  .delete-dimension {
+  .modal__submit-btn—cancel{
     width: 156px;
     height: 52px;
   }
