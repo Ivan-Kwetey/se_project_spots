@@ -48,15 +48,14 @@ const setEventListeners = (formElement, config) => {
   });
 };
 
-const enableValidation = (config) => {
-  const formList = document.querySelectorAll(config.formSelector);
+export const enableValidation = (config) => {
+  const formList = Array.from(document.querySelectorAll(config.formSelector));
   formList.forEach((formElement) => {
     setEventListeners(formElement, config);
   });
 };
 
-// Validation config
-const validationConfig = {
+export const validationConfig = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__submit-btn",
@@ -64,5 +63,3 @@ const validationConfig = {
   inputErrorClass: "modal__input_type_error",
   errorClass: "modal__error_visible"
 };
-
-enableValidation(validationConfig);

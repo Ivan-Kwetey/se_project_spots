@@ -30,6 +30,36 @@
   background-color: white;
 }
 
+.cancel-delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   width: fit-content;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.modal__delete-container {
+  position: relative;
+  width: 630px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 32px;
+  font-family: 'Poppins', sans-serif;
+  height: auto;
+  background-color: white;
+  margin: 0;
+}
+
+#edit-delete-modal .modal__header {
+  justify-content: center;
+}
+
 .modal__header {
   position: relative;
   display: flex;
@@ -181,6 +211,7 @@
   border: 1px solid rgba(255, 0, 0, 0.6);
 }
 
+
 .modal__submit-btn:hover:not(:disabled) {
   opacity: 0.8;
 }
@@ -189,9 +220,56 @@
   border: 1px solid rgba(255, 0, 0, 0.6);
 }
 
+.modal__submit-btn--red{
+  background-color: #FF6565;
+}
+.modal__submit-btn--red:hover:not(:disabled) {
+  background-color: #FF3333;
+  opacity: 1;
+}
+.modal__submit-btn--white {
+  background-color: #FFFFFF;
+  color: #212121;
+  border: #212121 1px solid;
+}
+
+.modal__submit-btn--red:hover:not(:disabled){
+  background-color: #212121;
+  opacity: 1;
+  color: #FFFFFF;
+}
+
+#delete-form {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+}
+
+.delete-close-btn{
+  position: absolute;
+  top: -200px;
+  right:-100;}
+
+#delete__title{
+  font-size: 24px;
+  font-weight: 500;
+  color: #212121;
+  line-height: 100%;
+  padding: 0;
+  margin: 0;
+}
 
 .modal__error_visible {
   display: block;
+}
+
+.delete-close-btn {
+  position: absolute;
+  top: -40px;
+  right: -52.5px;
+  background: transparent url('../images/ClosewhiteIcon.svg') center/40px no-repeat;
+  opacity: 1;
 }
 
 @media (max-width: 630px) {
@@ -232,6 +310,32 @@
 
   .modal__preview-caption {
     font-size: 16px;
+  }
+
+  .modal__delete-container {
+  width: 300px;
+   height: fit-content;
+   padding: 0;
+   gap: 20px;
+  }
+
+  #delete__title {
+    font-size: 20px;
+  }
+
+  .delete-close-btn{
+    top: -60px;
+    right: 10px;
+  }
+
+  #delete-form {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .modal__submit-btn—cancel{
+    width: 156px;
+    height: 52px;
   }
 }
 
