@@ -28,10 +28,6 @@
   font-family: 'Poppins', sans-serif;
   height: auto;
   background-color: white;
-
-
-
-
 }
 
 .cancel-delete {
@@ -64,9 +60,6 @@
   justify-content: center;
 }
 
-
-
-
 .modal__header {
   position: relative;
   display: flex;
@@ -76,8 +69,6 @@
   padding: 0;
   margin: 0;
 }
-
-
 
 .modal__close-btn {
   width: 40px;
@@ -240,7 +231,6 @@
   background-color: #FFFFFF;
   color: #212121;
   border: #212121 1px solid;
-
 }
 
 .modal__submit-btn--red:hover:not(:disabled){
@@ -252,7 +242,7 @@
 #delete-form {
   display: flex;
   flex-direction: row;
-  gap: 2opx;
+  gap: 20px;
   justify-content: center;
 }
 
@@ -281,9 +271,6 @@
   background: transparent url('../images/ClosewhiteIcon.svg') center/40px no-repeat;
   opacity: 1;
 }
-
-
-
 
 @media (max-width: 630px) {
   .modal__container {

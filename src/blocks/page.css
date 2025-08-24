@@ -5,10 +5,12 @@
   width: 100%;
   font-family: "Poppins", Arial, sans-serif;
   color: #212121;
+  padding: 0 20px;
 }
 
 @media (max-width: 630px) {
   .page {
     max-width: 630px;
+    padding: 0 16px;
   }
 }
